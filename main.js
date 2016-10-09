@@ -63,15 +63,17 @@ $(document).ready(function () {
 
   ];
   
-  
+  var randomNumber = Math.floor(Math.random() * quotes.length);
 
   $('#quoteButton').click(function (event) {
 
     event.preventDefault();
     
+     randomNumber = Math.floor(Math.random() * quotes.length);
     
-    var randomNumber = Math.floor(Math.random() * quotes.length),
-      newQuote = quotes[randomNumber].quote,
+      var newQuote = quotes[randomNumber].quote,
+      author = quotes[randomNumber].originalAuthor,
+      quoteContainer = $('.quoteContainer');newQuote = quotes[randomNumber].quote,
       author = quotes[randomNumber].originalAuthor,
       quoteContainer = $('.quoteContainer');
 
@@ -84,6 +86,20 @@ $(document).ready(function () {
         
     });  
 	});
+  
+  $('#tweetButton').click(function (e) {
+
+    e.preventDefault();
+    
+      var newQuote = quotes[randomNumber].quote,
+      author = quotes[randomNumber].originalAuthor,
+      textToTweet = String(newQuote + " -" + author),
+      twtLink = 'http://twitter.com/home?status=' + encodeURIComponent(textToTweet);
+    window.open(twtLink, '_blank');
+    
+  
+  });
+
 });
 
 

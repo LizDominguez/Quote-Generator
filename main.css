@@ -8,8 +8,7 @@ html {
 }
 
 
-.quote-box {
-    width: 100%;
+.container-fluid {
     height: 350px;
     color: white;
     font-size: 40px;
@@ -22,7 +21,7 @@ html {
     overflow-x:hidden;
 }
 
-.quote {
+.quoteContainer {
   text-align: left;
   font-family: 'Poppins';
   margin: 0px 10px 0px 20px;

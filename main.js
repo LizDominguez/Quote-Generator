@@ -1,5 +1,6 @@
 /*jslint browser: true*/
 /*global $, jQuery*/
+
 $(document).ready(function () {
   "use strict";
   var quotes = [
@@ -64,38 +65,25 @@ $(document).ready(function () {
   
   
 
-  $('#quoteButton').click(function (evt) {
-//define the containers of the info we target
-  
-    var quote = $('#quoteContainer p').text(),
-      sourceLength = quotes.length,
-      randomNumber = Math.floor(Math.random() * sourceLength),
-      i;
+  $('#quoteButton').click(function (event) {
+
+    event.preventDefault();
     
-    evt.preventDefault();
+    
+    var randomNumber = Math.floor(Math.random() * quotes.length),
+      newQuote = quotes[randomNumber].quote,
+      author = quotes[randomNumber].originalAuthor,
+      quoteContainer = $('.quoteContainer');
 
-  
-    for (i = 0; i <= sourceLength; i += 1) {
-  
-      var newQuote = quotes[randomNumber].quote,
-        newOriginalAuthor = quotes[randomNumber].originalAuthor,
-        timeAnimation = 500,
-        quoteContainer = $('#quoteContainer');
-
-      quoteContainer.fadeOut(timeAnimation, function () {
-        quoteContainer.html('');
-        quoteContainer.append('<li class="fa fa-quote-left fa-lg" aria-hidden="true"></li> ' + newQuote + ' <li class="fa fa-quote-right fa-lg" aria-hidden="true"></li>' + '<p align="right" style="font-size: 30px; margin-right: 50px;"> - <strike>' + newOriginalAuthor + '</strike></p>');
+    quoteContainer.fadeOut(500, function () {
+      quoteContainer.html('');
+      quoteContainer.append('<li class="fa fa-quote-left fa-lg" aria-hidden="true"></li> ' + newQuote + ' <li class="fa fa-quote-right fa-lg" aria-hidden="true"></li>' + '<p align="right" style="font-size: 30px; margin-right: 50px;"> - <strike>' + author + '</strike></p>');
          
         
-        quoteContainer.fadeIn(timeAnimation);
+      quoteContainer.fadeIn(500);
         
-      });  
-			break;
-		}
-	
+    });  
 	});
-		
-		
 });
 
 

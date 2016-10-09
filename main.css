@@ -1,0 +1,60 @@
+html { 
+  background: url(melania.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
+.quote-box {
+    width: 100%;
+    height: 350px;
+    color: white;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px #000;
+    background-color: transparent;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    overflow: scroll; 
+    overflow-x:hidden;
+}
+
+.quote {
+  text-align: left;
+  font-family: 'Poppins';
+  margin: 0px 10px 0px 20px;
+}
+
+.cite {
+  text-align: right;   
+  font-size: 30px;
+  font-family: 'Poppins';
+  margin: 10px 50px 0px 0px;
+}
+
+.button {
+  font-family: 'Open Sans';
+  font-size: 20px;
+  font-style: oblique;
+  background-color: black; 
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px -40px 0px 50px;
+  cursor: pointer;
+  
+}
+
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+

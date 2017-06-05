@@ -7,5 +7,5 @@ The inspiration for my first project was a speech by Melania Trump, during which
 It is a satire and does not reflect my political opinion.
 
 Features:
-* generates random quotes/lyrics
-* tweets the quote on the screen with credit to original author
+* Generates random quotes/lyrics
+* Tweets the quote on the screen with credit to original author
